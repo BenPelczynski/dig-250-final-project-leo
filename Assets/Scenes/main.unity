@@ -184,7 +184,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 249419280}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.02343759, z: -10}
+  m_LocalPosition: {x: -0.38626978, y: 0.21657148, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1197668502}
@@ -320,7 +320,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 883525545}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.02343759, z: -10}
+  m_LocalPosition: {x: -0.38626978, y: 0.21657148, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -378,11 +378,11 @@ MonoBehaviour:
   m_YDamping: 20
   m_ZDamping: 20
   m_TargetMovementOnly: 1
-  m_ScreenX: 0.5
-  m_ScreenY: 0.503125
+  m_ScreenX: 0.5289858
+  m_ScreenY: 0.5288762
   m_CameraDistance: 10
-  m_DeadZoneWidth: 0.027464896
-  m_DeadZoneHeight: 0.03125
+  m_DeadZoneWidth: 0.06
+  m_DeadZoneHeight: 0.08
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
   m_SoftZoneWidth: 0.5040021
@@ -482,8 +482,8 @@ Rigidbody:
   m_GameObject: {fileID: 1729374902}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0.25
-  m_AngularDrag: 0.05
+  m_Drag: 0
+  m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
