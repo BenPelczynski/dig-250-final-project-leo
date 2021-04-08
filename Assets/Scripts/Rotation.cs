@@ -8,7 +8,7 @@ using System.Collections;
      public Vector3 direction = Vector3.up;
 
 
-     void Update()
+     void FixedUpdate()
      {
 
          transform.RotateAround(target.transform.position, direction, speed * Time.deltaTime);

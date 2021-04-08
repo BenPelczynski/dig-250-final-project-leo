@@ -31,7 +31,7 @@ public class ShipManeuver : PhysicsBase {
 
     }
 
-    void FixedUpdate ()
+    void LateUpdate ()
     {
        
         // if player input is happening and the current object is targeted
