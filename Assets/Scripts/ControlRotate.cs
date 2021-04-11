@@ -6,8 +6,6 @@ using System.Collections;
      public GameObject target;
      public float speed = 300;
      public Vector3 direction = Vector3.up;
-
-
      void FixedUpdate()
      {
 	   if (Input.GetKey("space"))
@@ -15,6 +13,5 @@ using System.Collections;
          	//print("space key was pressed");
          	transform.RotateAround(target.transform.position, direction, speed * Time.deltaTime);
 	   }
-    	}
-
+    }
  }
