@@ -8,6 +8,7 @@ public class LaserControl : MonoBehaviour
     public Camera cam;
     public LineRenderer lineRenderer;
     public Transform firePoint;
+    public GameObject circle;
 
     // Start is called before the first frame update
     void Start()
@@ -46,10 +47,11 @@ public class LaserControl : MonoBehaviour
     void UpdateLaser()
     {
         var mousePos = (Vector2)cam.ScreenToWorldPoint(Input.mousePosition);
-        
+
+
         lineRenderer.SetPosition(0, firePoint.position);
         
-        lineRenderer.SetPosition(1, mousePos);
+        lineRenderer.SetPosition(1, circle.transform.position);
     }
 
     void DisableLaser()
