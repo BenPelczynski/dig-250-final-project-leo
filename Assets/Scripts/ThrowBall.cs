@@ -34,9 +34,9 @@ public class ThrowBall : MonoBehaviour {
             if (holdingBall) {
             //print ("holding ball");
             	holdingBall = false;
-            	rb.AddForce((shipVelocity * ballThrowingForce) + new Vector3(0f, 20f, 0f));
+            	rb.AddForce(transform.up * ballThrowingForce);
             	transform.parent = null;
-            	print(transform.eulerAngles.z);
+            	print(transform.forward);
             }
         }
         rb.velocity = rb.velocity * new Vector2(1f, 1f);
