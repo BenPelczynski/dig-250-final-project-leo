@@ -23,13 +23,23 @@ public class LaserControl : MonoBehaviour
         
         if(Input.GetButtonDown("Fire1"))
         {
-            EnableLaser();            
+            if (Physics2D.Raycast(firePoint.position, circle.transform.position, 15, 1)){
+            EnableLaser();  
+            }
+          
         }
         
 
         if(Input.GetButton("Fire1"))
         {
             UpdateLaser();
+            if (Physics2D.Raycast(firePoint.position, circle.transform.position, 15, 1))
+            {
+                if(circle.transform.parent != firePoint){
+                    circle.transform.parent = firePoint;
+                }
+            }
+                
         }
 
         if(Input.GetButtonUp("Fire1"))
@@ -51,7 +61,7 @@ public class LaserControl : MonoBehaviour
 
         lineRenderer.SetPosition(0, firePoint.position);
         
-        lineRenderer.SetPosition(1, circle.transform.position);
+        lineRenderer.SetPosition(1, new Vector3(circle.transform.position.x * 1.2f, circle.transform.position.y * 1.2f, 0));
     }
 
     void DisableLaser()
