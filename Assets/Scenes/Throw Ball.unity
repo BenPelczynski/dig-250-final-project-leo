@@ -417,7 +417,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ship: {fileID: 1430509000}
   ball: {fileID: 1744984811}
+  velocity: {x: 0, y: 0, z: 0}
   ballThrowingForce: 5
+  holdingBall: 1
 --- !u!1 &2111093331
 GameObject:
   m_ObjectHideFlags: 0

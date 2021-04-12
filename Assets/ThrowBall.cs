@@ -2,25 +2,42 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ThrowBall : MonoBehaviour
-{   public GameObject ship;
+public class ThrowBall : MonoBehaviour {
+    public GameObject ship;
     public GameObject ball;
+    Rigidbody shipRb;
+    Rigidbody2D rb2d;
+
+
+    Vector3 shipLastPos;
+    public Vector3 shipVelocity;
 
     public float ballThrowingForce = 400f;
-    private bool holdingBall = true;
+    public bool holdingBall = true;
 
-    void FixedUpdate()
+
+    private void Start ()
     {
-        if (Input.GetKey("return")){
-           print("pressed return key");
-           
-           if (holdingBall)
-           {
-               print("holding ball");
-               holdingBall = false;
-               ball.GetComponent<Rigidbody2D>().AddForce(ball.transform.forward * ballThrowingForce);
-           }
-       }
+        rb2d = ball.GetComponent<Rigidbody2D> ();
+        shipRb = ship.GetComponent<Rigidbody> ();
+    }
+
+    void FixedUpdate ()
+    {
+        // update velocity
+        shipVelocity = (shipRb.position - shipLastPos) * 50;
+        shipLastPos = shipRb.position;
+        //Debug.Log (shipVelocity);
+
+        if (Input.GetKey ("return")) {
+            print ("pressed return key");
+
+            //if (holdingBall) {
+            print ("holding ball");
+            holdingBall = false;
+            rb2d.AddForce (shipVelocity * ballThrowingForce);
+            //}
+        }
     }
 
 }
