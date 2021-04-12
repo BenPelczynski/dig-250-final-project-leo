@@ -42,9 +42,9 @@ public class LaserControl : MonoBehaviour
             {
                 lineRenderer.enabled = true;
                 UpdateLaser();
-                Debug.Log("SecondGet");
+                //Debug.Log("SecondGet");
                 if(circle.transform.parent == firePoint){
-                    Debug.Log("hit child");
+                    //Debug.Log("hit child");
                     circle.transform.parent = firePoint;
                 }
             }

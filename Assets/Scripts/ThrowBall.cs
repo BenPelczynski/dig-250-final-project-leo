@@ -6,18 +6,18 @@ public class ThrowBall : MonoBehaviour {
     public GameObject ship;
     public GameObject ball;
     Rigidbody shipRb;
-    Rigidbody2D rb2d;
+    Rigidbody2D rb;
 
     Vector3 shipLastPos;
     public Vector3 shipVelocity;
 
-    public float ballThrowingForce = 400f;
+    public float ballThrowingForce = 4f;
     public bool holdingBall = true;
 
 
     private void Start ()
     {
-        rb2d = ball.GetComponent<Rigidbody2D> ();
+        rb = ball.GetComponent<Rigidbody2D> ();
         shipRb = ship.GetComponent<Rigidbody> ();
     }
 
@@ -34,7 +34,7 @@ public class ThrowBall : MonoBehaviour {
             //if (holdingBall) {
             print ("holding ball");
             holdingBall = false;
-            rb2d.AddForce (shipVelocity * ballThrowingForce);
+            rb.AddForce (shipVelocity * ballThrowingForce);
             //}
         }
     }

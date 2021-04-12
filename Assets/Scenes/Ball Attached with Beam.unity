@@ -135,6 +135,8 @@ GameObject:
   - component: {fileID: 13894596}
   - component: {fileID: 13894594}
   - component: {fileID: 13894595}
+  - component: {fileID: 13894598}
+  - component: {fileID: 13894599}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -231,13 +233,51 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 13894593}
-  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 1.73, y: -3.78, z: 0}
-  m_LocalScale: {x: 0.20000005, y: 0.20000005, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.009999932, y: 0.71000016, z: 0}
+  m_LocalScale: {x: 0.10000006, y: 0.10000006, z: 0}
   m_Children: []
-  m_Father: {fileID: 497326685}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &13894598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13894593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d65531a0c684418a8105b5df5752065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ship: {fileID: 497326680}
+  ball: {fileID: 13894593}
+  shipVelocity: {x: 0, y: 0, z: 0}
+  ballThrowingForce: 4
+  holdingBall: 1
+--- !u!50 &13894599
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13894593}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &250647499
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,7 +365,7 @@ LineRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1491865389
-  m_SortingLayer: 1
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
@@ -675,7 +715,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0}
   m_Children:
-  - {fileID: 13894597}
   - {fileID: 993712223}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -798,7 +837,7 @@ Transform:
   m_Children:
   - {fileID: 250647500}
   m_Father: {fileID: 497326685}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &993712224
 SpriteRenderer:

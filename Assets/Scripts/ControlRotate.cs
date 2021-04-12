@@ -8,7 +8,7 @@ using System.Collections;
      public Vector3 direction = Vector3.up;
      void FixedUpdate()
      {
-	   if (Input.GetKey("space"))
+	   if (Input.GetKey("space") && (transform.parent != null))
         {
          	//print("space key was pressed");
          	transform.RotateAround(target.transform.position, direction, speed * Time.deltaTime);
