@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Laser
+    uniqueID: 1491865389
+    locked: 0
+  - name: Ball
+    uniqueID: 359577875
+    locked: 0
+  - name: Player
+    uniqueID: 3996226109
+    locked: 0
