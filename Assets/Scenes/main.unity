@@ -216,7 +216,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 87b4ac691fb634c73ac82ac67d3b7a55, type: 3}
-  m_Color: {r: 0.46226418, g: 0.019624414, b: 0.18367188, a: 1}
+  m_Color: {r: 0.07172379, g: 0.8584906, b: 0.020247417, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -289,6 +289,7 @@ GameObject:
   - component: {fileID: 250647500}
   - component: {fileID: 250647502}
   - component: {fileID: 250647501}
+  - component: {fileID: 250647503}
   m_Layer: 2
   m_Name: Line
   m_TagString: Untagged
@@ -425,6 +426,22 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!114 &250647503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250647499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e989739dbf761421a98cbed6a83d36e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 481371802}
+  lineRenderer: {fileID: 250647502}
+  firePoint: {fileID: 497326685}
+  circle: {fileID: 13894593}
 --- !u!1 &407160782
 GameObject:
   m_ObjectHideFlags: 0

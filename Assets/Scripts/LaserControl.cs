@@ -28,7 +28,7 @@ public class LaserControl : MonoBehaviour
         if(Input.GetButtonDown("Fire1"))
         {
             if (Physics2D.Raycast(firePoint.position, circle.transform.position, 15, 1)){
-            EnableLaser();  
+            	EnableLaser();  
             
             }
           
