@@ -20,7 +20,7 @@ public class Ball : MonoBehaviour
       {
         if (Input.GetKeyDown("space"))
         {
-          Launch();
+          //Launch();
           start_press = true;
         }
       }

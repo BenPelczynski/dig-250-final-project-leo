@@ -11,7 +11,7 @@ public class ThrowBall : MonoBehaviour {
     Vector3 shipLastPos;
     public Vector3 shipVelocity;
 
-    public float ballThrowingForce = 4f;
+    public float ballThrowingForce = 100f;
     public bool holdingBall = true;
 
 
@@ -29,14 +29,17 @@ public class ThrowBall : MonoBehaviour {
         //Debug.Log (shipVelocity);
 
         if (Input.GetKey ("return")) {
-            print ("pressed return key");
+            //print ("pressed return key");
 
-            //if (holdingBall) {
-            print ("holding ball");
-            holdingBall = false;
-            rb.AddForce (shipVelocity * ballThrowingForce);
-            //}
+            if (holdingBall) {
+            //print ("holding ball");
+            	holdingBall = false;
+            	rb.AddForce((shipVelocity * ballThrowingForce) + new Vector3(0f, 20f, 0f));
+            	transform.parent = null;
+            	print(transform.eulerAngles.z);
+            }
         }
+        rb.velocity = rb.velocity * new Vector2(1f, 1f);
     }
 
 }
