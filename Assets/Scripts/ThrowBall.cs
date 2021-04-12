@@ -28,7 +28,7 @@ public class ThrowBall : MonoBehaviour {
         shipLastPos = shipRb.position;
         //Debug.Log (shipVelocity);
 
-        if (Input.GetKey ("return")) {
+        if (Input.GetKey(KeyCode.E)) {
             //print ("pressed return key");
 
             if (holdingBall) {
@@ -36,7 +36,7 @@ public class ThrowBall : MonoBehaviour {
             	holdingBall = false;
             	rb.AddForce(transform.up * ballThrowingForce);
             	transform.parent = null;
-            	print(transform.forward);
+            	//print(transform.forward);
             }
         }
         rb.velocity = rb.velocity * new Vector2(1f, 1f);
