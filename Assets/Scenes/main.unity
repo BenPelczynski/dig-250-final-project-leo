@@ -2013,10 +2013,10 @@ MonoBehaviour:
   m_DeadZoneHeight: 0.07570626
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
-  m_SoftZoneWidth: 0.14
-  m_SoftZoneHeight: 0.31558624
+  m_SoftZoneWidth: 0.21288635
+  m_SoftZoneHeight: 0.45548266
   m_BiasX: 0
-  m_BiasY: 0.00000012423847
+  m_BiasY: 0.000000078473334
   m_CenterOnActivate: 1
   m_GroupFramingMode: 2
   m_AdjustmentMode: 0
