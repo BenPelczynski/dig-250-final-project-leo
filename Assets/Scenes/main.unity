@@ -442,6 +442,7 @@ MonoBehaviour:
   lineRenderer: {fileID: 250647502}
   firePoint: {fileID: 497326685}
   circle: {fileID: 13894593}
+  speed: 0
 --- !u!1 &407160782
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,6 +760,7 @@ GameObject:
   - component: {fileID: 497326682}
   - component: {fileID: 497326681}
   - component: {fileID: 497326686}
+  - component: {fileID: 497326687}
   m_Layer: 2
   m_Name: PlayerBody
   m_TagString: Untagged
@@ -905,6 +907,24 @@ MonoBehaviour:
   lineRenderer: {fileID: 250647502}
   firePoint: {fileID: 497326685}
   circle: {fileID: 13894593}
+  speed: 3
+--- !u!114 &497326687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497326680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d65531a0c684418a8105b5df5752065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ship: {fileID: 497326680}
+  ball: {fileID: 13894593}
+  shipVelocity: {x: 0, y: 0, z: 0}
+  ballThrowingForce: 100
+  holdingBall: 1
 --- !u!1 &819379210
 GameObject:
   m_ObjectHideFlags: 0
