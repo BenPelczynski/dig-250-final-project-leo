@@ -35,7 +35,7 @@ public class LaserControl : MonoBehaviour
 
         if(Input.GetButtonDown("Fire1"))
         {
-            if (Physics2D.Raycast(firePoint.position, directionRay, 10, 1)){
+            if (Physics2D.Raycast(firePoint.position, directionRay, 2, 1)){
             	EnableLaser();  
             
             }
@@ -49,7 +49,7 @@ public class LaserControl : MonoBehaviour
         if(Input.GetButton("Fire1"))
         {
            
-            if (Physics2D.Raycast(firePoint.position, directionRay, 10, 1))
+            if (Physics2D.Raycast(firePoint.position, directionRay, 2, 1))
             {
 
                 // trying to get the laser to retract the ball into the ship slowly
