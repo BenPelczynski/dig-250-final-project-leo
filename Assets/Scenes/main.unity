@@ -442,7 +442,6 @@ MonoBehaviour:
   lineRenderer: {fileID: 250647502}
   firePoint: {fileID: 497326685}
   circle: {fileID: 13894593}
-  speed: 0
 --- !u!1 &407160782
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,7 +906,6 @@ MonoBehaviour:
   lineRenderer: {fileID: 250647502}
   firePoint: {fileID: 497326685}
   circle: {fileID: 13894593}
-  speed: 3
 --- !u!114 &497326687
 MonoBehaviour:
   m_ObjectHideFlags: 0
