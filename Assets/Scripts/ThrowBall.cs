@@ -37,7 +37,7 @@ public class ThrowBall : MonoBehaviour {
         if (Input.GetKey(KeyCode.E)) {
             //print ("pressed return key");
             
-            if(ball.transform.parent == ship){
+            if(ball.transform.parent != null){
                 Debug.Log("child");
                 rb.velocity = new Vector2(0f,0f);
                 holdingBall = true;
@@ -51,11 +51,11 @@ public class ThrowBall : MonoBehaviour {
             }
 
             // Ball stops and becomes a child of the ship when laser hits it
-            if (Physics2D.Raycast(ship.transform.position, directionRay, 10, 1))
-            {
-                holdingBall = true;
-                rb.velocity = new Vector2(0f,0f);
-            }
+            //if (Physics2D.Raycast(ship.transform.position, directionRay, 10, 1))
+            //{
+            //    holdingBall = true;
+            //    rb.velocity = new Vector2(0f,0f);
+           // }
             
         }
         rb.velocity = rb.velocity * new Vector2(1f, 1f);
