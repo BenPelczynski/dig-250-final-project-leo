@@ -11,7 +11,7 @@ TagManager:
   - Background
   - Water
   - UI
-  - 
+  - SpaceJunk
   - 
   - 
   - 
@@ -49,6 +49,9 @@ TagManager:
     locked: 0
   - name: Laser
     uniqueID: 1491865389
+    locked: 0
+    - name: Junk
+    uniqueID: 2758659211
     locked: 0
   - name: UI
     uniqueID: 3659796659
