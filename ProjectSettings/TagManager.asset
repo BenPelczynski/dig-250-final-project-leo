@@ -50,6 +50,9 @@ TagManager:
   - name: Laser
     uniqueID: 1491865389
     locked: 0
-  - name: Junk
+    - name: Junk
     uniqueID: 2758659211
+    locked: 0
+  - name: UI
+    uniqueID: 3659796659
     locked: 0
