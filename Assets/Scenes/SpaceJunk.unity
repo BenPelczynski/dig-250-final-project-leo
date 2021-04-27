@@ -517,6 +517,12 @@ MonoBehaviour:
   - {fileID: 739756706}
   - {fileID: 1174871640}
   - {fileID: 910962885}
+  junkPrefabArray:
+  - {fileID: 6934062805020669200, guid: aebf58ab281fb476b80178b6c7960f8c, type: 3}
+  - {fileID: 5973019690556969109, guid: 1e0434c6e96a340a59aa122fefccfea0, type: 3}
+  - {fileID: 2303457721041736292, guid: 1a70103aabf5b47478c05c54c789beed, type: 3}
+  - {fileID: 2865835790146291056, guid: f46e7894c373a404393f36c9a90c639c, type: 3}
+  - {fileID: 4891162804485773678, guid: 86e1a97953b284d26ae73e228a04292b, type: 3}
   junkPrefab: {fileID: 6934062805020669200, guid: aebf58ab281fb476b80178b6c7960f8c, type: 3}
   originIndex: 0
   targetIndex: 0
