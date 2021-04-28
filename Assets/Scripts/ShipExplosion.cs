@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Explosion : MonoBehaviour
+public class ShipExplosion : MonoBehaviour
 {
     Animator animator;
 
@@ -25,11 +25,14 @@ public class Explosion : MonoBehaviour
 
     IEnumerator OnCollisionEnter2D(Collision2D theCollision)
     {
-      if(theCollision.gameObject.name == "Circle")
+      if(theCollision.gameObject.name == "junk-1" ||
+      theCollision.gameObject.name == "junk-2" ||
+      theCollision.gameObject.name == "junk-3" ||
+      theCollision.gameObject.name == "junk-4")
       {
         animator.SetInteger(animationState, (int) CharStates.explosion);
         yield return new WaitForSeconds(3);
-        Destroy(gameObject);
+        //Destroy(gameObject);
       }
     }
 
