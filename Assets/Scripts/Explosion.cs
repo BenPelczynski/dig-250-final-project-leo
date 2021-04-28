@@ -23,9 +23,11 @@ public class Explosion : MonoBehaviour
     {
     }
 
-    void OnCollisionEnter()
+    IEnumerator OnCollisionEnter2D()
     {
       animator.SetInteger(animationState, (int) CharStates.explosion);
+      yield return new WaitForSeconds(3);
+      Destroy(gameObject);
     }
 
     /*private void UpdateState()
