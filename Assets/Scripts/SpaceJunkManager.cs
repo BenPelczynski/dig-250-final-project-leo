@@ -16,7 +16,7 @@ public class SpaceJunkManager : MonoBehaviour
     void Start()
     {
         // begin looping
-        StartCoroutine (JunkCreatorLoop(1.0f));
+        StartCoroutine (JunkCreatorLoop(0.2f));
     }
 
     IEnumerator JunkCreatorLoop(float wait)

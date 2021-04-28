@@ -255,7 +255,7 @@ MonoBehaviour:
   ship: {fileID: 497326680}
   ball: {fileID: 13894593}
   shipVelocity: {x: 0, y: 0, z: 0}
-  ballThrowingForce: 100
+  ballThrowingForce: 200
   holdingBall: 1
 --- !u!50 &13894599
 Rigidbody2D:
@@ -1369,7 +1369,7 @@ BoxCollider:
   m_GameObject: {fileID: 497326680}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.77000016, y: 0.8000002, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
@@ -3168,7 +3168,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1617836178}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: c24c54d98322c445ca262885b67dc184, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
