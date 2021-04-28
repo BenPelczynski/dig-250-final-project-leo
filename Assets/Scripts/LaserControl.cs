@@ -14,13 +14,13 @@ public class LaserControl : MonoBehaviour
     Rigidbody2D rb;
     
 
-
     // Start is called before the first frame update
     void Start()
     {
         rb = circle.GetComponent<Rigidbody2D> ();
 
         DisableLaser();
+        
     }
 
     // Update is called once per frame
