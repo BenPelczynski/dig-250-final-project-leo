@@ -31,9 +31,6 @@ public class ThrowBall : MonoBehaviour {
         shipLastPos = shipRb.position;
         //Debug.Log (shipVelocity);
 
-
-        
-
         if (Input.GetKey(KeyCode.E)) {
             //print ("pressed return key");
             
