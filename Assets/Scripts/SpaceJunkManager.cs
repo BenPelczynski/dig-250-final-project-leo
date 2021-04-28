@@ -7,6 +7,7 @@ public class SpaceJunkManager : MonoBehaviour
 {
 
     public BoxCollider2D [] perimeterContainers;
+    public GameObject [] junkPrefabArray;
     public GameObject junkPrefab;
     public int originIndex = 0;
     public int targetIndex;
@@ -51,6 +52,10 @@ public class SpaceJunkManager : MonoBehaviour
         // no random rotation
         spawnRotation.eulerAngles = new Vector3 (0f, 0f, 0f);
 
+        // choose random space junk from array and assign to junkPrefab object
+        int junkIndex = Random.Range(0,5); // adjust based on how many junk prefabs using
+        junkPrefab = junkPrefabArray[junkIndex];
+
         // Instantiate prefab at spawn position
         GameObject spaceJunkObj = (GameObject) Instantiate (junkPrefab, startPos, spawnRotation);
 
@@ -61,7 +66,8 @@ public class SpaceJunkManager : MonoBehaviour
 
         spaceJunkObj.transform.parent = gameObject.transform;
 
-        originIndex = (originIndex+1) % 4;
+        // originIndex = (originIndex+1) % 4;
+        originIndex = Random.Range(0,4); // no longer in clockwise rotation
 
     }
     Vector3 FindPointInBounds(Bounds bounds)
