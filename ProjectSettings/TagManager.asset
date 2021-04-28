@@ -41,6 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Explosion
+    uniqueID: 1684892565
+    locked: 0
   - name: Player
     uniqueID: 3996226109
     locked: 0
@@ -49,9 +52,6 @@ TagManager:
     locked: 0
   - name: Laser
     uniqueID: 1491865389
-    locked: 0
-    - name: Junk
-    uniqueID: 2758659211
     locked: 0
   - name: UI
     uniqueID: 3659796659
