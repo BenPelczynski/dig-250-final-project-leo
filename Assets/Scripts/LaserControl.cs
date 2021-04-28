@@ -66,6 +66,7 @@ public class LaserControl : MonoBehaviour
                 if(circle.transform.parent != firePoint){
                     Debug.Log("hit child");
                     circle.transform.parent = firePoint;
+                    circle.transform.up = directionRay;
                     rb.velocity = new Vector2(0f,0f);
                     
                     // circle.transform.position = new Vector3(.8f,.8f,0f) ;
