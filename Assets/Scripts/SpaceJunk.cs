@@ -14,7 +14,7 @@ public class SpaceJunk : MonoBehaviour
     {
         origin = start;
         destination = target;
-        speed = Random.Range(5,15); // randomize speed of junks movement
+        speed = Random.Range(2,5); // randomize speed of junks movement
     }
 
     // Update is called once per frame
