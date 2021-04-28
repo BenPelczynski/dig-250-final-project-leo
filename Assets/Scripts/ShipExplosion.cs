@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ShipExplosion : MonoBehaviour
 {
@@ -29,12 +30,14 @@ public class ShipExplosion : MonoBehaviour
     {
       GameObject go = GameObject.Find ("PlayerBody");
       if (theCollision.gameObject.name != "Circle"){
+        go.GetComponent<ShipManeuver>().enabled = false;
         animator.SetInteger(animationState, (int) CharStates.ShipExplosion);
         yield return new WaitForSeconds(3);
         if (go){
           Destroy(go);
         }
         Destroy(gameObject);
+        SceneManager.LoadScene("StartMenu");
       }
     }
 
