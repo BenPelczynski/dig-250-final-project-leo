@@ -20,15 +20,8 @@ public class Ball : MonoBehaviour
       {
         if (Input.GetKeyDown("space"))
         {
-          //Launch();
           start_press = true;
         }
       }
-    }
-    private void Launch()
-    {
-      float x = Random.Range(0, 2) == 0 ? -1 : 1;
-      float y = Random.Range(0, 2) == 0 ? -1 : 1;
-      rb.velocity = new Vector2(speed * x, speed * y);
     }
 }
