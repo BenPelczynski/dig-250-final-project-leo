@@ -6,16 +6,18 @@ public class ShipExplosion : MonoBehaviour
 {
     Animator animator;
 
-    string animationState = "AnimationState";
+    string animationState = "ShipState";
 
     enum CharStates
     {
-      explosion = 1
+      ShipExplosion = 1,
+      explosion = 2
     }
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<Animator>();
+      GameObject go = GameObject.Find ("PlayerBody");
+      animator = go.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -23,16 +25,16 @@ public class ShipExplosion : MonoBehaviour
     {
     }
 
-    IEnumerator OnCollisionEnter2D(Collision2D theCollision)
+    IEnumerator OnTriggerEnter2D(Collider2D theCollision)
     {
-      if(theCollision.gameObject.name == "junk-1" ||
-      theCollision.gameObject.name == "junk-2" ||
-      theCollision.gameObject.name == "junk-3" ||
-      theCollision.gameObject.name == "junk-4")
-      {
-        animator.SetInteger(animationState, (int) CharStates.explosion);
+      GameObject go = GameObject.Find ("PlayerBody");
+      if (theCollision.gameObject.name != "Circle"){
+        animator.SetInteger(animationState, (int) CharStates.ShipExplosion);
         yield return new WaitForSeconds(3);
-        //Destroy(gameObject);
+        if (go){
+          Destroy(go);
+        }
+        Destroy(gameObject);
       }
     }
 
