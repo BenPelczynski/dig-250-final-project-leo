@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PhysicsBase : MonoBehaviour {
 
-	protected Rigidbody rb;             // rigidbody of gameobject
+	protected Rigidbody2D rb;             // rigidbody of gameobject
 	public float thrust = 10f;          // amount of thrust added to direction
 	[SerializeField, Range (0f, 100f)]
 	public float maxVelocity = 10f;    // maximum velocity
@@ -13,7 +13,7 @@ public class PhysicsBase : MonoBehaviour {
 
 	void Awake ()
 	{
-		rb = GetComponent<Rigidbody> ();
+		rb = GetComponent<Rigidbody2D> ();
 	}
 
 	// ~ 60 frames / second
@@ -21,7 +21,7 @@ public class PhysicsBase : MonoBehaviour {
 	{
 		// create new Vector3 from input between -1 and 1 for x and z axis
 		// update is the best place to capture Input data 
-		playerInput = new Vector3 (Input.GetAxis ("Horizontal"), Input.GetAxis ("Vertical"), 0);
+		playerInput = new Vector3 (Input.GetAxis ("Horizontal"), Input.GetAxis ("Vertical"));
 		// normalize input (make sure vector's total length never exceeds 1)
 		playerInput = Vector3.ClampMagnitude (playerInput, 1f);
 	}

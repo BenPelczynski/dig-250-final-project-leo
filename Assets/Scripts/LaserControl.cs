@@ -40,12 +40,20 @@ public class LaserControl : MonoBehaviour
             
             if (Physics2D.Raycast(firePoint.position, circle.transform.position, 15, 1))
             {
+<<<<<<< Updated upstream
                 lineRenderer.enabled = true;
+=======
+
+>>>>>>> Stashed changes
                 UpdateLaser();
                 Debug.Log("SecondGet");
                 if(circle.transform.parent == firePoint){
                     Debug.Log("hit child");
                     circle.transform.parent = firePoint;
+<<<<<<< Updated upstream
+=======
+                    rb.velocity = new Vector2(0f,0f);
+>>>>>>> Stashed changes
                 }
             }
             lineRenderer.enabled = true;
