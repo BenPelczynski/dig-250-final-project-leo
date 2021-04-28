@@ -6,11 +6,11 @@ public class ThrowBall : MonoBehaviour {
 
     public GameObject ship;
     public GameObject ball;
-    Rigidbody shipRb;
+    Rigidbody2D shipRb;
     Rigidbody2D rb;
 
-    Vector3 shipLastPos;
-    public Vector3 shipVelocity;
+    Vector2 shipLastPos;
+    public Vector2 shipVelocity;
 
     public float ballThrowingForce = 100f;
     public bool holdingBall = true;
@@ -19,7 +19,7 @@ public class ThrowBall : MonoBehaviour {
     private void Start ()
     {
         rb = ball.GetComponent<Rigidbody2D> ();
-        shipRb = ship.GetComponent<Rigidbody> ();
+        shipRb = ship.GetComponent<Rigidbody2D> ();
     }
 
     void FixedUpdate ()
