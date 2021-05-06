@@ -23,13 +23,14 @@ public class Explosion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
     }
 
     IEnumerator OnCollisionEnter2D(Collision2D theCollision)
     {
       if(theCollision.gameObject.name == "Circle")
       {
-        score.value = score.value + 100;
+        score.value = score.value + score.points;
         animator.SetInteger(animationState, (int) CharStates.explosion);
         yield return new WaitForSeconds(3);
         Destroy(gameObject);

@@ -18,6 +18,6 @@ public class ScoreMarker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scText.text = "" + score.value;
+        scText.text = "" + score.value + "\n Combo Mult: x" + score.points/100;
     }
 }

@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 13894595}
   - component: {fileID: 13894598}
   - component: {fileID: 13894599}
+  - component: {fileID: 13894600}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -173,7 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 497326680}
-  speed: 200
+  speed: 400
   direction: {x: 0, y: 0, z: 1}
 --- !u!212 &13894596
 SpriteRenderer:
@@ -234,7 +235,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 13894593}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 1.4200004, y: -0.01999998, z: 0}
+  m_LocalPosition: {x: 2.53, y: 0.019, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.3}
   m_Children: []
   m_Father: {fileID: 497326685}
@@ -278,6 +279,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &13894600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13894593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2b3774e3a0ba714fb329b67de4b6103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: {fileID: 11400000, guid: 0e3a589f5c504954d9562c7758f1f8da, type: 2}
+  point_time: 0
 --- !u!1001 &56865891
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1283,7 +1298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6be5a1bec8fd10478ece9759389d315, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 50
+  thrust: 30
   maxVelocity: 10
   playerInput: {x: 0, y: 0, z: 0}
   direction: {x: 0, y: 0, z: 0}
@@ -1612,8 +1627,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 80, y: -15}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 80.15744, y: -25.705597}
+  m_SizeDelta: {x: 160.3149, y: 51.4112}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &786103975
 GameObject:
