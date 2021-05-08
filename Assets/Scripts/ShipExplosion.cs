@@ -18,6 +18,7 @@ public class ShipExplosion : MonoBehaviour
     void Start()
     {
       GameObject go = GameObject.Find ("PlayerBody");
+      GameObject ball = GameObject.Find ("Circle");
       animator = go.GetComponent<Animator>();
     }
 
@@ -29,8 +30,11 @@ public class ShipExplosion : MonoBehaviour
     IEnumerator OnTriggerEnter2D(Collider2D theCollision)
     {
       GameObject go = GameObject.Find ("PlayerBody");
+      GameObject ball = GameObject.Find ("Circle");
+
       if (theCollision.gameObject.name != "Circle"){
         go.GetComponent<ShipManeuver>().enabled = false;
+        ball.GetComponent<Collider2D>().enabled = false;
         animator.SetInteger(animationState, (int) CharStates.ShipExplosion);
         yield return new WaitForSeconds(3);
         if (go){
