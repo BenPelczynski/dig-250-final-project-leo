@@ -53,7 +53,7 @@ public class SpaceJunkManager : MonoBehaviour
         spawnRotation.eulerAngles = new Vector3 (0f, 0f, 0f);
 
         // choose random space junk from array and assign to junkPrefab object
-        int junkIndex = Random.Range(0,4); // adjust based on how many junk prefabs using
+        int junkIndex = Random.Range(0,5); // adjust based on how many junk prefabs using
         junkPrefab = junkPrefabArray[junkIndex];
 
         // Instantiate prefab at spawn position
