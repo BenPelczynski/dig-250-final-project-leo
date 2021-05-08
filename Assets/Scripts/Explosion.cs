@@ -7,7 +7,7 @@ public class Explosion : MonoBehaviour
     Animator animator;
 
     string animationState = "AnimationState";
-    
+
     public Score score;
 
     enum CharStates
@@ -30,6 +30,7 @@ public class Explosion : MonoBehaviour
       if(theCollision.gameObject.name == "Circle")
       {
         score.value = score.value + 100;
+        theCollision.gameObject.GetComponent<Collider2D>().enabled = false;
         animator.SetInteger(animationState, (int) CharStates.explosion);
         yield return new WaitForSeconds(3);
         Destroy(gameObject);
