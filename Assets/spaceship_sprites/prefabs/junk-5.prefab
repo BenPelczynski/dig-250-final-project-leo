@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4891162804485773676}
   - component: {fileID: 4891162804485773679}
   - component: {fileID: -6305663501386096382}
+  - component: {fileID: -6757558566329136678}
   m_Layer: 0
   m_Name: junk-5
   m_TagString: Untagged
@@ -97,3 +98,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: {fileID: 11400000, guid: 0e3a589f5c504954d9562c7758f1f8da, type: 2}
   powerUp: {fileID: 347944536339079044, guid: 0f8255506b53fc24da8c3ec8f54bb1c9, type: 3}
+--- !u!114 &-6757558566329136678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4891162804485773678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb27438c3996479b8de092dbc958517, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  origin: {x: 0, y: 0, z: 0}
+  destination: {x: 0, y: 0, z: 0}
+  speed: 0
