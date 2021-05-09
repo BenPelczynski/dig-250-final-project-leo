@@ -2,26 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ball : MonoBehaviour
+public class MultiBall : MonoBehaviour
 {
-  bool start_press = false;
+
   public float speed;
   public Rigidbody2D rb;
+
     // Start is called before the first frame update
     void Start()
     {
-
+    		Vector3 velo = new Vector3(Random.Range(-5f, 5f),Random.Range(-5f, 5f),Random.Range(-5f, 5f));
+		rb.velocity = (velo * speed);
     }
 
     // Update is called once per frame
     void Update()
     {
-      if (start_press == false)
+      if(Time.time > 30.0)
       {
-        if (Input.GetKeyDown("space"))
-        {
-          start_press = true;
-        }
-      }
+      	Destroy(gameObject);
+      }  
+ 
     }
 }

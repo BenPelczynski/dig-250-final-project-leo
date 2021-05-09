@@ -9,6 +9,8 @@ public class ShipExplosion : MonoBehaviour
 
     string animationState = "ShipState";
     
+    public GameObject mball;
+    
     public Score score;
 
     enum CharStates
@@ -41,11 +43,11 @@ public class ShipExplosion : MonoBehaviour
 	 }
 	
 	else if (theCollision.gameObject.name == "PowerUp_MultiBall(Clone)"){
-	 	Debug.Log("hit M");
+	 	Instantiate(mball, theCollision.gameObject.transform.position, Quaternion.identity);
         	Destroy(theCollision.gameObject);
 	 }
 	
-      else if (theCollision.gameObject.name != "Circle"){
+      else if (theCollision.gameObject.name != "Circle" && theCollision.gameObject.name != "MultiBall(Clone)"){
         Debug.Log(theCollision.gameObject.name);
         go.GetComponent<ShipManeuver>().enabled = false;
         ball.GetComponent<Collider2D>().enabled = false;

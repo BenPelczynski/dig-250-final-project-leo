@@ -32,7 +32,7 @@ public class Explosion : MonoBehaviour
 
     IEnumerator OnCollisionEnter2D(Collision2D theCollision)
     {
-      if(theCollision.gameObject.name == "Circle")
+      if(theCollision.gameObject.name == "Circle" || theCollision.gameObject.name == "MultiBall(Clone)")
       {
         score.value = score.value + score.points;
         gameObject.GetComponent<Collider2D>().enabled = false;
