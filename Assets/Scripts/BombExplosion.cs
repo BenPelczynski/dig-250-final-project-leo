@@ -17,7 +17,7 @@ public class BombExplosion : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Rigidbody2D rb = bomb.AddComponent<Rigidbody2D>();
+        //Rigidbody2D rb = bomb.AddComponent<Rigidbody2D>();
         // shield.SetActive(true);
         bomb_circ = GetComponent<CircleCollider2D>();
 

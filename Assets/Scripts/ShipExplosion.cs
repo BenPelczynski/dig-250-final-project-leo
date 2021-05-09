@@ -54,7 +54,7 @@ public class ShipExplosion : MonoBehaviour
         	Destroy(theCollision.gameObject);
 	 }
 	
-      else if (theCollision.gameObject.name != "Circle" && theCollision.gameObject.name != "Shield" && theCollision.gameObject.name != "MultiBall(Clone)"
+      else if (theCollision.gameObject.name != "Circle" && theCollision.gameObject.name != "Shield(Clone)" && theCollision.gameObject.name != "MultiBall(Clone)"
       && theCollision.gameObject.name != "Bomb"){
         
         Debug.Log(theCollision.gameObject.name);
