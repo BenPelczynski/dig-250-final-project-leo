@@ -25,6 +25,7 @@ public class BombExplosion : MonoBehaviour
         
         scaleChange = new Vector3(0.07f, 0.07f, 0.0f);
         
+        rb.isKinematic = true;
         // rb.detectCollisions = false;
 
         
@@ -34,23 +35,19 @@ public class BombExplosion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.isKinematic = false;
-
-        if(Input.GetKey(KeyCode.Q))
-        {
-            rb.isKinematic = true;
+        
+            
             // rb.detectCollisions = true;
 
-            while (width < 10f){
+            while (width < 5f){
                 width = width+0.07f;
                 bomb_circ.radius = bomb_circ.radius+=0.01f;
                 bomb.transform.localScale += scaleChange;
-                
-            }
-        
+            
+            Destroy(bomb);}
             rb.isKinematic = false;
             // rb.detectCollisions = false;
-        }
+        
         
         
     }

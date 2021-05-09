@@ -5,7 +5,8 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - mball: {instanceID: 0}
-  - shield: {fileID: 2176241519534309749, guid: 808abba434b134ed6b5e9af1ecb034f7, type: 3}
+  - bomb: {instanceID: 0}
+  - shield: {instanceID: 0}
   - score: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}

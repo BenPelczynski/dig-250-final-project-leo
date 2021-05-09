@@ -16,6 +16,8 @@ public class Explosion : MonoBehaviour
 
     public GameObject powerUpS;
 
+    public GameObject powerUpB;
+
     enum CharStates
     {
       explosion = 1
@@ -55,6 +57,10 @@ public class Explosion : MonoBehaviour
           else if (random < 60f)
         	{
         		Instantiate(powerUpS, transform.position, Quaternion.identity);
+        	}
+          else if (random < 80f)
+        	{
+        		Instantiate(powerUpB, transform.position, Quaternion.identity);
         	}
         }
 

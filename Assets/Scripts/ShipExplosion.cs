@@ -11,6 +11,8 @@ public class ShipExplosion : MonoBehaviour
     
     public GameObject mball;
 
+    public GameObject bomb;
+
     public GameObject shield;
     
     public Score score;
@@ -25,6 +27,7 @@ public class ShipExplosion : MonoBehaviour
     {
       GameObject go = GameObject.Find ("PlayerBody");
       GameObject ball = GameObject.Find ("Circle");
+      GameObject shield_power = GameObject.Find ("Shield(Clone)");
       animator = go.GetComponent<Animator>();
     }
 
@@ -37,6 +40,7 @@ public class ShipExplosion : MonoBehaviour
     {
       GameObject go = GameObject.Find ("PlayerBody");
       GameObject ball = GameObject.Find ("Circle");
+      GameObject shield_power = GameObject.Find ("Shield(Clone)");
 	
 	if (theCollision.gameObject.name == "PowerUp_Combo(Clone)"){
 	 	score.value = score.value + score.points + 500;
@@ -49,9 +53,18 @@ public class ShipExplosion : MonoBehaviour
         	Destroy(theCollision.gameObject);
 	 }
 
+  else if (theCollision.gameObject.name == "PowerUp_Bomb(Clone)"){
+  Instantiate(bomb, theCollision.gameObject.transform.position, Quaternion.identity);
+        Destroy(theCollision.gameObject);
+  }
+  //do this for the bomb
+
   else if (theCollision.gameObject.name == "PowerUp_Shield(Clone)"){
-	 	Instantiate(shield, theCollision.gameObject.transform.position, Quaternion.identity);
+    
+	 	Instantiate(shield, go.transform.position, Quaternion.identity);
         	Destroy(theCollision.gameObject);
+          shield_power.transform.parent = go.transform;
+          
 	 }
 	
       else if (theCollision.gameObject.name != "Circle" && theCollision.gameObject.name != "Shield(Clone)" && theCollision.gameObject.name != "MultiBall(Clone)"

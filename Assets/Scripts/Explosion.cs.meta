@@ -7,7 +7,8 @@ MonoImporter:
   - score: {instanceID: 0}
   - powerUpC: {instanceID: 0}
   - powerUpM: {instanceID: 0}
-  - powerUpS: {fileID: 2176241519534309749, guid: 808abba434b134ed6b5e9af1ecb034f7, type: 3}
+  - powerUpS: {instanceID: 0}
+  - powerUpB: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
