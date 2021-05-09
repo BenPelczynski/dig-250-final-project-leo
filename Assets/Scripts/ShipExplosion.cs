@@ -44,7 +44,7 @@ public class ShipExplosion : MonoBehaviour
         	Destroy(theCollision.gameObject);
 	 }
 	
-	else if (theCollision.gameObject.name == "PowerUp_MultiBall(Clone)"){
+	else if (theCollision.gameObject.name == "PowerUp_Multi(Clone)"){
 	 	Instantiate(mball, theCollision.gameObject.transform.position, Quaternion.identity);
         	Destroy(theCollision.gameObject);
 	 }
