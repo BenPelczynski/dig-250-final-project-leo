@@ -14,6 +14,8 @@ public class Explosion : MonoBehaviour
     
     public GameObject powerUpM;
 
+    public GameObject powerUpS;
+
     enum CharStates
     {
       explosion = 1
@@ -32,12 +34,12 @@ public class Explosion : MonoBehaviour
 
     IEnumerator OnCollisionEnter2D(Collision2D theCollision)
     {
-      if(theCollision.gameObject.name == "Circle" || theCollision.gameObject.name == "MultiBall(Clone)")
+      if(theCollision.gameObject.name == "Circle" || theCollision.gameObject.name == "MultiBall(Clone)" || theCollision.gameObject.name == "Shield(Clone)")
       {
         score.value = score.value + score.points;
         gameObject.GetComponent<Collider2D>().enabled = false;
 
-        if (powerUpC != null && powerUpM != null)
+        if (powerUpC != null && powerUpM != null )
         {
         	float random = Random.Range(0f, 100f);
         	if (random < 20f) 
@@ -47,6 +49,11 @@ public class Explosion : MonoBehaviour
         	else if (random < 40f)
         	{
         		Instantiate(powerUpM, transform.position, Quaternion.identity);
+        	}
+
+          else if (random < 60f)
+        	{
+        		Instantiate(powerUpS, transform.position, Quaternion.identity);
         	}
         }
 

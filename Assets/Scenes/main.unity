@@ -1401,7 +1401,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 481371799}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0000003874302, y: -0.00000011920929, z: -10}
+  m_LocalPosition: {x: 0.00000020861626, y: -0.00000011920929, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3516,6 +3516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mball: {fileID: 5720484247021634875, guid: 6e1ea4f00d8a866418c694d035bea20e, type: 3}
+  shield: {fileID: 0}
   score: {fileID: 11400000, guid: 0e3a589f5c504954d9562c7758f1f8da, type: 2}
 --- !u!1 &1663962518
 GameObject:
@@ -3664,7 +3665,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1929445353}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0000003874302, y: -0.00000011920929, z: -10}
+  m_LocalPosition: {x: 0.00000020861626, y: -0.00000011920929, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1663962519}
