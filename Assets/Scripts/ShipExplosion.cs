@@ -8,6 +8,8 @@ public class ShipExplosion : MonoBehaviour
     Animator animator;
 
     string animationState = "ShipState";
+    
+    public Score score;
 
     enum CharStates
     {
@@ -31,8 +33,16 @@ public class ShipExplosion : MonoBehaviour
     {
       GameObject go = GameObject.Find ("PlayerBody");
       GameObject ball = GameObject.Find ("Circle");
+	
+	 if (theCollision.gameObject.name == "PowerUp_Combo(Clone)"){
+	 	score.value = score.value + score.points + 500;
+      	score.points = score.points + 500;
+        	Destroy(theCollision.gameObject);
 
-      if (theCollision.gameObject.name != "Circle"){
+	 }
+	
+      else if (theCollision.gameObject.name != "Circle"){
+        Debug.Log(theCollision.gameObject.name);
         go.GetComponent<ShipManeuver>().enabled = false;
         ball.GetComponent<Collider2D>().enabled = false;
         animator.SetInteger(animationState, (int) CharStates.ShipExplosion);
