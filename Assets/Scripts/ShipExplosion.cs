@@ -34,11 +34,15 @@ public class ShipExplosion : MonoBehaviour
       GameObject go = GameObject.Find ("PlayerBody");
       GameObject ball = GameObject.Find ("Circle");
 	
-	 if (theCollision.gameObject.name == "PowerUp_Combo(Clone)"){
+	if (theCollision.gameObject.name == "PowerUp_Combo(Clone)"){
 	 	score.value = score.value + score.points + 500;
       	score.points = score.points + 500;
         	Destroy(theCollision.gameObject);
-
+	 }
+	
+	else if (theCollision.gameObject.name == "PowerUp_MultiBall(Clone)"){
+	 	Debug.Log("hit M");
+        	Destroy(theCollision.gameObject);
 	 }
 	
       else if (theCollision.gameObject.name != "Circle"){

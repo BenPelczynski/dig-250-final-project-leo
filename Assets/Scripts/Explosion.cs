@@ -10,7 +10,9 @@ public class Explosion : MonoBehaviour
 
     public Score score;
 
-    public GameObject powerUp;
+    public GameObject powerUpC;
+    
+    public GameObject powerUpM;
 
     enum CharStates
     {
@@ -35,9 +37,17 @@ public class Explosion : MonoBehaviour
         score.value = score.value + score.points;
         gameObject.GetComponent<Collider2D>().enabled = false;
 
-        if (powerUp != null)
+        if (powerUpC != null && powerUpM != null)
         {
-        	Instantiate(powerUp, transform.position, Quaternion.identity);
+        	float random = Random.Range(0f, 100f);
+        	if (random < 20f) 
+        	{
+        		Instantiate(powerUpC, transform.position, Quaternion.identity);
+        	}
+        	else if (random < 40f)
+        	{
+        		Instantiate(powerUpM, transform.position, Quaternion.identity);
+        	}
         }
 
         animator.SetInteger(animationState, (int) CharStates.explosion);
