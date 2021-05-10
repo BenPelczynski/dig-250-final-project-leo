@@ -962,8 +962,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -1401,7 +1401,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 481371799}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 0.00000028312206, y: -0.00000011920929, z: -10}
+=======
+  m_LocalPosition: {x: 0.00000020861626, y: -0.00000011920929, z: -10}
+  m_LocalPosition: {x: 0.00000040233135, y: -0.00000011920929, z: -10}
+>>>>>>> 31c086103825ff7d7a897c6492691e8f86821e51
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1453,7 +1458,6 @@ GameObject:
   - component: {fileID: 497326682}
   - component: {fileID: 497326681}
   - component: {fileID: 497326686}
-  - component: {fileID: 497326688}
   m_Layer: 2
   m_Name: PlayerBody
   m_TagString: Untagged
@@ -1601,19 +1605,6 @@ MonoBehaviour:
   lineRenderer: {fileID: 250647502}
   firePoint: {fileID: 497326685}
   circle: {fileID: 13894593}
---- !u!65 &497326688
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 497326680}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 0.77000016, y: 0.8000002, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &599712308
 GameObject:
   m_ObjectHideFlags: 0
@@ -1784,8 +1775,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -3410,7 +3401,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: c24c54d98322c445ca262885b67dc184, type: 2}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3529,6 +3520,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b13492692bf43e1b566e14ce7c96b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mball: {fileID: 5720484247021634875, guid: 6e1ea4f00d8a866418c694d035bea20e, type: 3}
+  bomb: {fileID: 0}
+  shield: {fileID: 2176241519534309749, guid: 808abba434b134ed6b5e9af1ecb034f7, type: 3}
+  score: {fileID: 11400000, guid: 0e3a589f5c504954d9562c7758f1f8da, type: 2}
 --- !u!1 &1663962518
 GameObject:
   m_ObjectHideFlags: 3
@@ -3676,7 +3671,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1929445353}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 0.00000028312206, y: -0.00000011920929, z: -10}
+=======
+  m_LocalPosition: {x: 0.00000020861626, y: -0.00000011920929, z: -10}
+  m_LocalPosition: {x: 0.00000040233135, y: -0.00000011920929, z: -10}
+>>>>>>> 31c086103825ff7d7a897c6492691e8f86821e51
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1663962519}
