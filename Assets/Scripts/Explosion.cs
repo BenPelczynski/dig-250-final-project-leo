@@ -7,10 +7,16 @@ public class Explosion : MonoBehaviour
     Animator animator;
 
     string animationState = "AnimationState";
-    
+
     public Score score;
+
+    public GameObject powerUpC;
     
-    public GameObject powerUp;
+    public GameObject powerUpM;
+
+    public GameObject powerUpS;
+
+    public GameObject powerUpB;
 
     enum CharStates
     {
@@ -30,15 +36,34 @@ public class Explosion : MonoBehaviour
 
     IEnumerator OnCollisionEnter2D(Collision2D theCollision)
     {
-      if(theCollision.gameObject.name == "Circle")
+      if(theCollision.gameObject.name == "Circle" || theCollision.gameObject.name == "MultiBall(Clone)" || theCollision.gameObject.name == "Shield(Clone)" 
+      || theCollision.gameObject.name == "Bomb")
       {
         score.value = score.value + score.points;
-        
-        if (powerUp != null)
+        gameObject.GetComponent<Collider2D>().enabled = false;
+
+        if (powerUpC != null && powerUpM != null )
         {
-        	Instantiate(powerUp, transform.position, Quaternion.identity);
+        	float random = Random.Range(0f, 100f);
+        	if (random < 20f) 
+        	{
+        		Instantiate(powerUpC, transform.position, Quaternion.identity);
+        	}
+        	else if (random < 40f)
+        	{
+        		Instantiate(powerUpM, transform.position, Quaternion.identity);
+        	}
+
+          else if (random < 60f)
+        	{
+        		Instantiate(powerUpS, transform.position, Quaternion.identity);
+        	}
+          else if (random < 80f)
+        	{
+        		Instantiate(powerUpB, transform.position, Quaternion.identity);
+        	}
         }
-        
+
         animator.SetInteger(animationState, (int) CharStates.explosion);
         yield return new WaitForSeconds(3);
         Destroy(gameObject);
