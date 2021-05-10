@@ -13,11 +13,7 @@ GameObject:
   - component: {fileID: 374341873835004276}
   - component: {fileID: 2980700597322662869}
   - component: {fileID: -6305663501386096382}
-<<<<<<< HEAD
   - component: {fileID: 7749714256310040180}
-=======
-  - component: {fileID: -6757558566329136678}
->>>>>>> 31c086103825ff7d7a897c6492691e8f86821e51
   m_Layer: 0
   m_Name: junk-5
   m_TagString: Untagged
@@ -144,24 +140,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: {fileID: 11400000, guid: 0e3a589f5c504954d9562c7758f1f8da, type: 2}
-<<<<<<< HEAD
   powerUp: {fileID: 347944536339079044, guid: 0f8255506b53fc24da8c3ec8f54bb1c9, type: 3}
 --- !u!95 &7749714256310040180
 Animator:
   serializedVersion: 3
-=======
-  powerUpC: {fileID: 347944536339079044, guid: 0f8255506b53fc24da8c3ec8f54bb1c9, type: 3}
-  powerUpM: {fileID: 1763716655001293579, guid: 92003aafce858874eb750c8c97510e15, type: 3}
-  powerUpS: {fileID: 2418011267605627937, guid: d34975ad873ee4d70998c99eefab5ee1, type: 3}
---- !u!114 &-6757558566329136678
-MonoBehaviour:
->>>>>>> 31c086103825ff7d7a897c6492691e8f86821e51
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4891162804485773678}
-<<<<<<< HEAD
   m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 735c27fec809044d8826b3ff27c639d6, type: 2}
@@ -173,13 +160,3 @@ MonoBehaviour:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
-=======
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: feb27438c3996479b8de092dbc958517, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  origin: {x: 0, y: 0, z: 0}
-  destination: {x: 0, y: 0, z: 0}
-  speed: 0
->>>>>>> 31c086103825ff7d7a897c6492691e8f86821e51

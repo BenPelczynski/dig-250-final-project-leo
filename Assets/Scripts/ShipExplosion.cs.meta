@@ -3,11 +3,7 @@ guid: 18b13492692bf43e1b566e14ce7c96b1
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - mball: {instanceID: 0}
-  - bomb: {instanceID: 0}
-  - shield: {instanceID: 0}
-  - score: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
